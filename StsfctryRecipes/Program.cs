@@ -32,23 +32,49 @@ namespace StsfctryRecipes
             rootCommand.AddCommand(recipeCommand);
 
             recipeCommand.AddCommand(CreateListRecipeCommand());
-            recipeCommand.AddCommand(CreateUpdateRecipeCommand());
             recipeCommand.AddCommand(CreateAddRecipeCommand());
+            recipeCommand.AddCommand(CreateUpdateRecipeCommand());
+            recipeCommand.AddCommand(CreateAddRecipeDependencyCommand());
 
             rootCommand.Invoke(args);
+        }
+        
+        private static Command CreateAddRecipeDependencyCommand()
+        {
+            Command command = new Command("add-dependency", "Add an inpute recepe dependency");
+
+            Argument<int> id = new Argument<int>("id", "Recipe id");
+            command.AddArgument(id);
+
+            Argument<int> dependencyId = new Argument<int>("dependency-id", "Target recipe id");
+            command.AddArgument(dependencyId);
+
+            Argument<double> consuptionRate = new Argument<double>("consuption-rate", "Items per minute consumed from the dependency");
+            command.AddArgument(consuptionRate);
+
+            command.SetHandler(
+                (i, dId, cR) =>
+                {
+                    EditRecipes((l) => RecipeEdit.AddDependency(l, i, dId, cR));
+                    ListRecipes(i);
+                },
+                id,
+                dependencyId,
+                consuptionRate);
+            return command;
         }
 
         private static Command CreateAddRecipeCommand()
         {
-            Command addRecipeCommand = new Command("add", "Add new recipe");
+            Command command = new Command("add", "Add new recipe");
 
             Argument<string> title = new Argument<string>("title", "Recipe title");
-            addRecipeCommand.AddArgument(title);
+            command.AddArgument(title);
 
             Argument<double> productionRate = new Argument<double>("production-rate", () => 1.0, "Items produced per minute from 1 production unit");
-            addRecipeCommand.AddArgument(productionRate);
+            command.AddArgument(productionRate);
 
-            addRecipeCommand.SetHandler(
+            command.SetHandler(
                 (t, pR) =>
                 {
                     EditRecipes((l) => RecipeEdit.Add(l, t, pR));
@@ -57,23 +83,23 @@ namespace StsfctryRecipes
                 title,
                 productionRate);
 
-            return addRecipeCommand;
+            return command;
         }
 
         private static Command CreateUpdateRecipeCommand()
         {
-            Command updateComand = new Command("update", "Update existing recipe");
+            Command command = new Command("update", "Update existing recipe");
 
             Argument<int> id = new Argument<int>("id", "Recipe id");
-            updateComand.AddArgument(id);
+            command.AddArgument(id);
 
             Option<string> title = new Option<string>("--title", () => string.Empty, "Recipe title");
-            updateComand.AddOption(title);
+            command.AddOption(title);
 
             Option<double?> productionRate = new Option<double?>("--production-rate", () => default(double?), "Recipe production rate per minute");
-            updateComand.AddOption(productionRate);
+            command.AddOption(productionRate);
 
-            updateComand.SetHandler(
+            command.SetHandler(
                 (i, t, pR) =>
                 {
                     EditRecipes((l) => RecipeEdit.Update(l, i, t, pR));
@@ -83,7 +109,7 @@ namespace StsfctryRecipes
                 title,
                 productionRate);
 
-            return updateComand;
+            return command;
         }
 
         private static Command CreateListRecipeCommand()
@@ -101,15 +127,15 @@ namespace StsfctryRecipes
 
         private static void ListRecipes(int? id = null)
         {
-            Console.WriteLine("Satisfactory Recipes");
             List<Recipe> recipes = LoadRecipes();
             Recipe targetRecipe = recipes.SingleOrDefault(r => r.Id == id);
             if (targetRecipe != null)
             {
-                ListRecipe(targetRecipe);
+                ListRecipe(recipes, targetRecipe);
             }
             else
             {
+                Console.WriteLine("Satisfactory Recipes");
                 foreach (Recipe recipe in recipes)
                 {
                     Console.WriteLine($"{recipe.Id:000} {recipe.Title}");
@@ -117,10 +143,46 @@ namespace StsfctryRecipes
             }
         }
 
-        private static void ListRecipe(Recipe recipe)
+        private static void ListRecipe(List<Recipe> recipes, Recipe recipe)
         {
             Console.WriteLine($"Recipe {recipe.Id}: {recipe.Title}");
             Console.WriteLine($"Production Rate: {recipe.ProductionRate:###,##0} per minute");
+            ListRecipeChildren(recipes, recipe);
+        }
+
+        private static void ListRecipeChildren(List<Recipe> recipes, Recipe recipe, string padding = "")
+        {
+            if (recipe.Items.Count > 0)
+            {
+                for (int i = 0; i < recipe.Items.Count; i += 1)
+                {
+                    Recipe child = recipes.Find(r => r.Id == recipe.Items[i].RecipeId);
+                    bool isLast = recipe.Items.Count - 1 == i;
+                    if (isLast)
+                    {
+                        Console.Write(padding + "└ ");
+                    }   
+                    else
+                    {
+                        Console.Write(padding + "├ ");
+                    }                        
+                    Console.Write($"{recipe.Items[i].ConsuptionRate:###,##0} per min ");                    
+                    if (child != null)
+                    {
+                        Console.WriteLine(child.Title);
+                        string childPadding = padding;
+                        if (isLast)
+                            childPadding += "  ";
+                        else
+                            childPadding += "│ ";
+                        ListRecipeChildren(recipes, child, childPadding);
+                    }
+                    else
+                    {
+                        Console.WriteLine("not found");
+                    }
+                }
+            }
         }
 
         public delegate IEnumerable<Recipe> EditRecipesDelegate(List<Recipe> recipes);
@@ -132,6 +194,10 @@ namespace StsfctryRecipes
                 SaveRecipes(editRecipesDelegate.Invoke(LoadRecipes()));
             }
             catch (DuplicateRecipeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (RecipeNotFoundException ex)
             {
                 Console.WriteLine(ex.Message);
             }

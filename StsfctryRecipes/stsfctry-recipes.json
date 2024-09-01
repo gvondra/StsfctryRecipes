@@ -4,112 +4,252 @@
     "Title": "iron ingot",
     "ProductionRate": 30.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 17,
+        "ConsuptionRate": 30.0
+      }
+    ]
   },
   {
     "Id": 2,
     "Title": "adaptive control unit",
     "ProductionRate": 1.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 3,
+        "ConsuptionRate": 7.5
+      },
+      {
+        "RecipeId": 4,
+        "ConsuptionRate": 5.0
+      },
+      {
+        "RecipeId": 5,
+        "ConsuptionRate": 1.0
+      },
+      {
+        "RecipeId": 6,
+        "ConsuptionRate": 1.0
+      }
+    ]
   },
   {
     "Id": 3,
     "Title": "automated wiring",
     "ProductionRate": 2.5,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 7,
+        "ConsuptionRate": 2.5
+      },
+      {
+        "RecipeId": 8,
+        "ConsuptionRate": 50.0
+      }
+    ]
   },
   {
     "Id": 4,
     "Title": "circuit board",
     "ProductionRate": 7.5,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 9,
+        "ConsuptionRate": 15.0
+      },
+      {
+        "RecipeId": 10,
+        "ConsuptionRate": 30.0
+      }
+    ]
   },
   {
     "Id": 5,
     "Title": "heavy modular frame",
     "ProductionRate": 2.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 11,
+        "ConsuptionRate": 10.0
+      },
+      {
+        "RecipeId": 12,
+        "ConsuptionRate": 30.0
+      },
+      {
+        "RecipeId": 13,
+        "ConsuptionRate": 10.0
+      },
+      {
+        "RecipeId": 14,
+        "ConsuptionRate": 200.0
+      }
+    ]
   },
   {
     "Id": 6,
     "Title": "computer",
     "ProductionRate": 2.5,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 4,
+        "ConsuptionRate": 25.0
+      },
+      {
+        "RecipeId": 8,
+        "ConsuptionRate": 22.5
+      },
+      {
+        "RecipeId": 10,
+        "ConsuptionRate": 45.0
+      },
+      {
+        "RecipeId": 14,
+        "ConsuptionRate": 130.0
+      }
+    ]
   },
   {
     "Id": 7,
     "Title": "stator",
     "ProductionRate": 5.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 12,
+        "ConsuptionRate": 15.0
+      },
+      {
+        "RecipeId": 15,
+        "ConsuptionRate": 40.0
+      }
+    ]
   },
   {
     "Id": 8,
     "Title": "cable",
     "ProductionRate": 30.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 15,
+        "ConsuptionRate": 60.0
+      }
+    ]
   },
   {
     "Id": 9,
     "Title": "copper sheet",
     "ProductionRate": 10.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 19,
+        "ConsuptionRate": 20.0
+      }
+    ]
   },
   {
     "Id": 10,
     "Title": "plastic",
     "ProductionRate": 20.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 27,
+        "ConsuptionRate": 30.0
+      }
+    ]
   },
   {
     "Id": 11,
     "Title": "modular frame",
     "ProductionRate": 2.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 21,
+        "ConsuptionRate": 3.0
+      },
+      {
+        "RecipeId": 22,
+        "ConsuptionRate": 12.0
+      }
+    ]
   },
   {
     "Id": 12,
     "Title": "steel pipe",
     "ProductionRate": 20.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 16,
+        "ConsuptionRate": 30.0
+      }
+    ]
   },
   {
     "Id": 13,
     "Title": "encased industrial beam",
     "ProductionRate": 6.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 24,
+        "ConsuptionRate": 24.0
+      },
+      {
+        "RecipeId": 25,
+        "ConsuptionRate": 30.0
+      }
+    ]
   },
   {
     "Id": 14,
     "Title": "screw",
     "ProductionRate": 40.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 22,
+        "ConsuptionRate": 10.0
+      }
+    ]
   },
   {
     "Id": 15,
     "Title": "wire",
     "ProductionRate": 30.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 19,
+        "ConsuptionRate": 15.0
+      }
+    ]
   },
   {
     "Id": 16,
     "Title": "steel ingot",
     "ProductionRate": 45.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 17,
+        "ConsuptionRate": 45.0
+      },
+      {
+        "RecipeId": 18,
+        "ConsuptionRate": 45.0
+      }
+    ]
   },
   {
     "Id": 17,
@@ -130,7 +270,12 @@
     "Title": "copper ingot",
     "ProductionRate": 30.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 20,
+        "ConsuptionRate": 30.0
+      }
+    ]
   },
   {
     "Id": 20,
@@ -144,35 +289,64 @@
     "Title": "reinforced iron plate",
     "ProductionRate": 5.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 14,
+        "ConsuptionRate": 60.0
+      },
+      {
+        "RecipeId": 23,
+        "ConsuptionRate": 30.0
+      }
+    ]
   },
   {
     "Id": 22,
     "Title": "iron rod",
     "ProductionRate": 15.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 1,
+        "ConsuptionRate": 15.0
+      }
+    ]
   },
   {
     "Id": 23,
     "Title": "iron plate",
     "ProductionRate": 20.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 1,
+        "ConsuptionRate": 30.0
+      }
+    ]
   },
   {
     "Id": 24,
     "Title": "steel beam",
     "ProductionRate": 15.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 16,
+        "ConsuptionRate": 60.0
+      }
+    ]
   },
   {
     "Id": 25,
     "Title": "concrete",
     "ProductionRate": 15.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [
+      {
+        "RecipeId": 26,
+        "ConsuptionRate": 45.0
+      }
+    ]
   },
   {
     "Id": 26,
