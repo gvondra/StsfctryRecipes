@@ -79,5 +79,29 @@ namespace StsfctryRecipes
             }
             return result?.OrderBy(r => r.Id)?.ToList() ?? recipes;
         }
+
+        public static IEnumerable<Recipe> RemoveDependency(List<Recipe> recipes, int id, int targetId)
+        {
+            List<Recipe> result = null;
+            int index = recipes.FindIndex(r => r.Id == id);
+            if (index < 0)
+            {
+                throw new RecipeNotFoundException(id.ToString());
+            }
+            Recipe existingRecipe = recipes[index];
+            Recipe newRecipe = new Recipe
+            {
+                Id = existingRecipe.Id,
+                Title = existingRecipe.Title,
+                ProductionRate = existingRecipe.ProductionRate,
+                IsEnabled = existingRecipe.IsEnabled,
+                Items = new List<RecipeItem>(existingRecipe.Items.Where(i => i.RecipeId != targetId))
+            };
+            result = new List<Recipe>(recipes.Where(r => r.Id != id))
+            {
+                newRecipe
+            };
+            return result?.OrderBy(r => r.Id)?.ToList() ?? recipes;
+        }
     }
 }

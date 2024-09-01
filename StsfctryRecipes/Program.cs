@@ -35,6 +35,7 @@ namespace StsfctryRecipes
             recipeCommand.AddCommand(CreateAddRecipeCommand());
             recipeCommand.AddCommand(CreateUpdateRecipeCommand());
             recipeCommand.AddCommand(CreateAddRecipeDependencyCommand());
+            recipeCommand.AddCommand(CreateRemoveRecipeDependencyCommand());
 
             rootCommand.Invoke(args);
         }
@@ -61,6 +62,27 @@ namespace StsfctryRecipes
                 id,
                 dependencyId,
                 consuptionRate);
+            return command;
+        }
+
+        private static Command CreateRemoveRecipeDependencyCommand()
+        {
+            Command command = new Command("remove-dependency", "Add an inpute recepe dependency");
+
+            Argument<int> id = new Argument<int>("id", "Recipe id");
+            command.AddArgument(id);
+
+            Argument<int> dependencyId = new Argument<int>("dependency-id", "Target recipe id");
+            command.AddArgument(dependencyId);
+
+            command.SetHandler(
+                (i, dId) =>
+                {
+                    EditRecipes((l) => RecipeEdit.RemoveDependency(l, i, dId));
+                    ListRecipes(i);
+                },
+                id,
+                dependencyId);
             return command;
         }
 
