@@ -1,0 +1,191 @@
+[
+  {
+    "Id": 1,
+    "Title": "iron ingot",
+    "ProductionRate": 30.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 2,
+    "Title": "adaptive control unit",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 3,
+    "Title": "automated wiring",
+    "ProductionRate": 2.5,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 4,
+    "Title": "circuit board",
+    "ProductionRate": 7.5,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 5,
+    "Title": "heavy modular frame",
+    "ProductionRate": 2.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 6,
+    "Title": "computer",
+    "ProductionRate": 2.5,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 7,
+    "Title": "stator",
+    "ProductionRate": 5.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 8,
+    "Title": "cable",
+    "ProductionRate": 30.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 9,
+    "Title": "copper sheet",
+    "ProductionRate": 10.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 10,
+    "Title": "plastic",
+    "ProductionRate": 20.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 11,
+    "Title": "modular frame",
+    "ProductionRate": 2.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 12,
+    "Title": "steel pipe",
+    "ProductionRate": 20.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 13,
+    "Title": "encased industrial beam",
+    "ProductionRate": 6.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 14,
+    "Title": "screw",
+    "ProductionRate": 40.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 15,
+    "Title": "wire",
+    "ProductionRate": 30.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 16,
+    "Title": "steel ingot",
+    "ProductionRate": 45.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 17,
+    "Title": "iron ore",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 18,
+    "Title": "coal",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 19,
+    "Title": "copper ingot",
+    "ProductionRate": 30.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 20,
+    "Title": "copper ore",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 21,
+    "Title": "reinforced iron plate",
+    "ProductionRate": 5.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 22,
+    "Title": "iron rod",
+    "ProductionRate": 15.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 23,
+    "Title": "iron plate",
+    "ProductionRate": 20.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 24,
+    "Title": "steel beam",
+    "ProductionRate": 15.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 25,
+    "Title": "concrete",
+    "ProductionRate": 15.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 26,
+    "Title": "limestone",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 27,
+    "Title": "crude oil",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": []
+  }
+]
