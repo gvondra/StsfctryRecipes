@@ -37,7 +37,31 @@ namespace StsfctryRecipes
             recipeCommand.AddCommand(CreateAddRecipeDependencyCommand());
             recipeCommand.AddCommand(CreateRemoveRecipeDependencyCommand());
 
+            rootCommand.AddCommand(CreateCalculateComand());
+
             rootCommand.Invoke(args);
+        }
+
+        private static Command CreateCalculateComand()
+        {
+            Command command = new Command("calc", "Calculate consuption rates and production units");
+
+            Argument<int> id = new Argument<int>("id", "Id of recipe to calculate");
+            command.Add(id);
+
+            Argument<double?> consuptionRate = new Argument<double?>("consuption-rate", "Items per minute to be produced");
+            command.Add(consuptionRate);
+
+            command.SetHandler(
+                (i, cR) =>
+                {
+                    Calculator calculator = new Calculator();
+                    calculator.Calculate(LoadRecipes(), i, cR);
+                },
+                id,
+                consuptionRate);
+
+            return command;
         }
         
         private static Command CreateAddRecipeDependencyCommand()
