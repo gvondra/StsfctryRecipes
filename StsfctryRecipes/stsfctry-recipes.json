@@ -397,5 +397,150 @@
         "ConsuptionRate": 30.0
       }
     ]
+  },
+  {
+    "Id": 30,
+    "Title": "water",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 31,
+    "Title": "bauxite",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 32,
+    "Title": "alumina solution",
+    "ProductionRate": 120.0,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 30,
+        "ConsuptionRate": 180.0
+      },
+      {
+        "RecipeId": 31,
+        "ConsuptionRate": 120.0
+      }
+    ]
+  },
+  {
+    "Id": 33,
+    "Title": "raw quartz",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": []
+  },
+  {
+    "Id": 34,
+    "Title": "silica",
+    "ProductionRate": 37.5,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 33,
+        "ConsuptionRate": 22.5
+      }
+    ]
+  },
+  {
+    "Id": 35,
+    "Title": "aluminum scrap",
+    "ProductionRate": 360.0,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 32,
+        "ConsuptionRate": 240.0
+      },
+      {
+        "RecipeId": 18,
+        "ConsuptionRate": 120.0
+      }
+    ]
+  },
+  {
+    "Id": 36,
+    "Title": "aluminum ingot",
+    "ProductionRate": 60.0,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 35,
+        "ConsuptionRate": 90.0
+      },
+      {
+        "RecipeId": 34,
+        "ConsuptionRate": 75.0
+      }
+    ]
+  },
+  {
+    "Id": 37,
+    "Title": "aluminum casing",
+    "ProductionRate": 60.0,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 36,
+        "ConsuptionRate": 90.0
+      }
+    ]
+  },
+  {
+    "Id": 38,
+    "Title": "crystal oscillator",
+    "ProductionRate": 1.0,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 39,
+        "ConsuptionRate": 18.0
+      },
+      {
+        "RecipeId": 8,
+        "ConsuptionRate": 14.0
+      },
+      {
+        "RecipeId": 21,
+        "ConsuptionRate": 2.5
+      }
+    ]
+  },
+  {
+    "Id": 39,
+    "Title": "quartz crystal",
+    "ProductionRate": 22.5,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 33,
+        "ConsuptionRate": 37.5
+      }
+    ]
+  },
+  {
+    "Id": 40,
+    "Title": "radio control unit",
+    "ProductionRate": 2.5,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 37,
+        "ConsuptionRate": 40.0
+      },
+      {
+        "RecipeId": 38,
+        "ConsuptionRate": 1.25
+      },
+      {
+        "RecipeId": 6,
+        "ConsuptionRate": 1.25
+      }
+    ]
   }
 ]
