@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.CommandLine;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace StsfctryRecipes
 {
@@ -32,6 +33,7 @@ namespace StsfctryRecipes
             rootCommand.AddCommand(recipeCommand);
 
             recipeCommand.AddCommand(CreateListRecipeCommand());
+            recipeCommand.AddCommand(CreateFindRecipeCommand());
             recipeCommand.AddCommand(CreateAddRecipeCommand());
             recipeCommand.AddCommand(CreateUpdateRecipeCommand());
             recipeCommand.AddCommand(CreateAddRecipeDependencyCommand());
@@ -158,6 +160,27 @@ namespace StsfctryRecipes
             return command;
         }
 
+        private static Command CreateFindRecipeCommand()
+        {
+            Command command = new Command("find", "Find recipe");
+
+            Argument<string> pattern = new Argument<string>("title", "Recipe title. Uses regular expressions");
+            command.AddArgument(pattern);
+
+            command.SetHandler(
+                p => FindRecipe(p),
+                pattern);
+
+            return command;
+        }
+
+        private static void FindRecipe(string pattern)
+        {
+            List<Recipe> recipes = LoadRecipes();
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(200));
+            ListRecipes(recipes.Where(r => regex.IsMatch(r.Title)));
+        }
+
         private static Command CreateListRecipeCommand()
         {
             Command recipeListCommand = new Command("list", "List recipes");
@@ -181,11 +204,16 @@ namespace StsfctryRecipes
             }
             else
             {
-                Console.WriteLine("Satisfactory Recipes");
-                foreach (Recipe recipe in recipes)
-                {
-                    Console.WriteLine($"{recipe.Id:000} {recipe.Title}");
-                }
+                ListRecipes(recipes);
+            }
+        }
+
+        private static void ListRecipes(IEnumerable<Recipe> recipes)
+        {
+            Console.WriteLine("Satisfactory Recipes");
+            foreach (Recipe recipe in recipes)
+            {
+                Console.WriteLine($"{recipe.Id:000} {recipe.Title}");
             }
         }
 
