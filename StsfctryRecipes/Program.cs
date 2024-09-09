@@ -192,7 +192,7 @@ namespace StsfctryRecipes
         private static void ListRecipe(List<Recipe> recipes, Recipe recipe)
         {
             Console.WriteLine($"Recipe {recipe.Id}: {recipe.Title}");
-            Console.WriteLine($"Production Rate: {recipe.ProductionRate:###,##0} per minute");
+            Console.WriteLine($"Production Rate: {recipe.ProductionRate:###,##0.####} per minute");
             ListRecipeChildren(recipes, recipe);
         }
 
