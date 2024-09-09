@@ -361,5 +361,41 @@
     "ProductionRate": 1.0,
     "IsEnabled": true,
     "Items": []
+  },
+  {
+    "Id": 28,
+    "Title": "Heavey Flexible Frame",
+    "ProductionRate": 3.75,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 11,
+        "ConsuptionRate": 18.75
+      },
+      {
+        "RecipeId": 13,
+        "ConsuptionRate": 11.25
+      },
+      {
+        "RecipeId": 29,
+        "ConsuptionRate": 75.0
+      },
+      {
+        "RecipeId": 14,
+        "ConsuptionRate": 390.0
+      }
+    ]
+  },
+  {
+    "Id": 29,
+    "Title": "Rubber",
+    "ProductionRate": 20.0,
+    "IsEnabled": true,
+    "Items": [
+      {
+        "RecipeId": 27,
+        "ConsuptionRate": 30.0
+      }
+    ]
   }
 ]
