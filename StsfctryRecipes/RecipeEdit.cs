@@ -34,7 +34,8 @@ namespace StsfctryRecipes
                     Title = string.IsNullOrEmpty(title) ? existingRecipe.Title : title,
                     ProductionRate = productionRate.HasValue ? productionRate.Value : existingRecipe.ProductionRate,
                     IsEnabled = existingRecipe.IsEnabled,
-                    Items = new List<RecipeItem>(existingRecipe.Items)
+                    ConsumedItems = new List<RecipeItem>(existingRecipe.ConsumedItems),
+                    ProducedItems = new List<RecipeItem>(existingRecipe.ProducedItems)
                 };
                 result = new List<Recipe>(recipes.Where(r => r.Id != id))
                 {
@@ -62,7 +63,7 @@ namespace StsfctryRecipes
                 throw new RecipeNotFoundException(targetId.ToString());
             }
             Recipe existingRecipe = recipes[index];
-            if (!existingRecipe.Items.Exists(r => r.RecipeId == targetId))
+            if (!existingRecipe.ConsumedItems.Exists(r => r.RecipeId == targetId))
             {
                 Recipe newRecipe = new Recipe
                 {
@@ -70,7 +71,8 @@ namespace StsfctryRecipes
                     Title = existingRecipe.Title,
                     ProductionRate = existingRecipe.ProductionRate,
                     IsEnabled = existingRecipe.IsEnabled,
-                    Items = new List<RecipeItem>(existingRecipe.Items.Concat(new List<RecipeItem> { new RecipeItem { RecipeId = targetId, ConsuptionRate = consuptionRate} }))
+                    ConsumedItems = new List<RecipeItem>(existingRecipe.ConsumedItems.Concat(new List<RecipeItem> { new RecipeItem { RecipeId = targetId, Rate = consuptionRate} })),
+                    ProducedItems = new List<RecipeItem>(existingRecipe.ProducedItems)
                 };
                 result = new List<Recipe>(recipes.Where(r => r.Id != id))
                 {
@@ -95,7 +97,8 @@ namespace StsfctryRecipes
                 Title = existingRecipe.Title,
                 ProductionRate = existingRecipe.ProductionRate,
                 IsEnabled = existingRecipe.IsEnabled,
-                Items = new List<RecipeItem>(existingRecipe.Items.Where(i => i.RecipeId != targetId))
+                ConsumedItems = new List<RecipeItem>(existingRecipe.ConsumedItems.Where(i => i.RecipeId != targetId)),
+                ProducedItems = new List<RecipeItem>(existingRecipe.ProducedItems)
             };
             result = new List<Recipe>(recipes.Where(r => r.Id != id))
             {

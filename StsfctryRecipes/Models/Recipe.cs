@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace StsfctryRecipes.Models
 {
@@ -8,6 +9,10 @@ namespace StsfctryRecipes.Models
         public string Title { get; set; }
         public double ProductionRate { get; set; } // per minute from 1 production unit
         public bool IsEnabled { get; set; } = true;
-        public List<RecipeItem> Items { get; set; } = new List<RecipeItem>(); 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        [Obsolete]
+        public List<RecipeItem> Items { get; set; }
+        public List<RecipeItem> ConsumedItems { get; init; } = new List<RecipeItem>();
+        public List<RecipeItem> ProducedItems { get; init; } = new List<RecipeItem>();
     }
 }

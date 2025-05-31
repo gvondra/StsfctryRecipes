@@ -226,12 +226,12 @@ namespace StsfctryRecipes
 
         private static void ListRecipeChildren(List<Recipe> recipes, Recipe recipe, string padding = "")
         {
-            if (recipe.Items.Count > 0)
+            if (recipe.ConsumedItems.Count > 0)
             {
-                for (int i = 0; i < recipe.Items.Count; i += 1)
+                for (int i = 0; i < recipe.ConsumedItems.Count; i += 1)
                 {
-                    Recipe child = recipes.Find(r => r.Id == recipe.Items[i].RecipeId);
-                    bool isLast = recipe.Items.Count - 1 == i;
+                    Recipe child = recipes.Find(r => r.Id == recipe.ConsumedItems[i].RecipeId);
+                    bool isLast = recipe.ConsumedItems.Count - 1 == i;
                     if (isLast)
                     {
                         Console.Write(padding + "└ ");
@@ -240,7 +240,7 @@ namespace StsfctryRecipes
                     {
                         Console.Write(padding + "├ ");
                     }                        
-                    Console.Write($"{recipe.Items[i].ConsuptionRate:###,##0} per min ");                    
+                    Console.Write($"{recipe.ConsumedItems[i].Rate:###,##0} per min ");                    
                     if (child != null)
                     {
                         Console.WriteLine(child.Title);
@@ -254,6 +254,15 @@ namespace StsfctryRecipes
                     else
                     {
                         Console.WriteLine("not found");
+                    }
+                }
+                if (recipe.ProducedItems.Count > 0)
+                {
+                    Console.WriteLine("  Alternate Products");
+                    for (int i = 0; i < recipe.ProducedItems.Count; i += 1)
+                    {
+                        Recipe child = recipes.Find(r => r.Id == recipe.ProducedItems[i].RecipeId);
+                        Console.WriteLine(padding + $"    {recipe.ProducedItems[i].Rate:###,##0.000} {child.Title}");
                     }
                 }
             }
@@ -290,8 +299,18 @@ namespace StsfctryRecipes
                     ContractResolver = new DefaultContractResolver()
                 };
                 result = serializer.Deserialize<List<Recipe>>(jsonReader);
+                InitializeConsumedItems(result);
             }
             return result ?? new List<Recipe>();
+        }
+
+        private static void InitializeConsumedItems(List<Recipe> recipes)
+        {
+            foreach (Recipe recipe in recipes)
+            {
+                if (recipe.Items != null && recipe.Items.Count > 0 && recipe.ConsumedItems.Count == 0)
+                    recipe.ConsumedItems.AddRange(recipe.Items);
+            }
         }
 
         private static void SaveRecipes(IEnumerable<Recipe> recipes)

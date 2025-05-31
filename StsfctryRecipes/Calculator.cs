@@ -18,9 +18,9 @@ namespace StsfctryRecipes
             Console.WriteLine($"Requires {consuptionRate.Value / recipe.ProductionRate} production unit(s)");
             _recipeConsumptionTotals.Add(recipe.Id, consuptionRate.Value);
             double scale = consuptionRate.Value / recipe.ProductionRate;
-            foreach (RecipeItem item in recipe.Items)
+            foreach (RecipeItem item in recipe.ConsumedItems)
             {
-                Calculate(recipes, recipe, item, scale * item.ConsuptionRate, string.Empty);
+                Calculate(recipes, recipe, item, scale * item.Rate, string.Empty);
             } 
             PrintTotals(recipes);
         }
@@ -29,7 +29,7 @@ namespace StsfctryRecipes
         {
             Recipe child = recipes.Find(r => r.Id == recipeItem.RecipeId);
             double scale = consuptionRate / child.ProductionRate;
-            bool isLast = recipe.Items.Count - 1 == recipe.Items.IndexOf(recipeItem);
+            bool isLast = recipe.ConsumedItems.Count - 1 == recipe.ConsumedItems.IndexOf(recipeItem);
             if (isLast)
                 Console.Write(padding + "└ ");
             else
@@ -44,9 +44,9 @@ namespace StsfctryRecipes
                 childPadding = padding + "  ";
             else
                 childPadding = padding + "│ ";
-            foreach (RecipeItem item in child.Items)
+            foreach (RecipeItem item in child.ConsumedItems)
             {
-                Calculate(recipes, child, item, scale * item.ConsuptionRate, childPadding);
+                Calculate(recipes, child, item, scale * item.Rate, childPadding);
             }
         }
 
