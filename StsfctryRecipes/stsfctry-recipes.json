@@ -7,9 +7,18 @@
     "Items": [
       {
         "RecipeId": 17,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 17,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 2,
@@ -19,21 +28,48 @@
     "Items": [
       {
         "RecipeId": 3,
-        "ConsuptionRate": 7.5
+        "ConsuptionRate": 7.5,
+        "Rate": 7.5
       },
       {
         "RecipeId": 4,
-        "ConsuptionRate": 5.0
+        "ConsuptionRate": 5.0,
+        "Rate": 5.0
       },
       {
         "RecipeId": 5,
-        "ConsuptionRate": 1.0
+        "ConsuptionRate": 1.0,
+        "Rate": 1.0
       },
       {
         "RecipeId": 6,
-        "ConsuptionRate": 1.0
+        "ConsuptionRate": 1.0,
+        "Rate": 1.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 3,
+        "ConsuptionRate": 7.5,
+        "Rate": 7.5
+      },
+      {
+        "RecipeId": 4,
+        "ConsuptionRate": 5.0,
+        "Rate": 5.0
+      },
+      {
+        "RecipeId": 5,
+        "ConsuptionRate": 1.0,
+        "Rate": 1.0
+      },
+      {
+        "RecipeId": 6,
+        "ConsuptionRate": 1.0,
+        "Rate": 1.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 3,
@@ -43,13 +79,28 @@
     "Items": [
       {
         "RecipeId": 7,
-        "ConsuptionRate": 2.5
+        "ConsuptionRate": 2.5,
+        "Rate": 2.5
       },
       {
         "RecipeId": 8,
-        "ConsuptionRate": 50.0
+        "ConsuptionRate": 50.0,
+        "Rate": 50.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 7,
+        "ConsuptionRate": 2.5,
+        "Rate": 2.5
+      },
+      {
+        "RecipeId": 8,
+        "ConsuptionRate": 50.0,
+        "Rate": 50.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 4,
@@ -59,13 +110,28 @@
     "Items": [
       {
         "RecipeId": 9,
-        "ConsuptionRate": 15.0
+        "ConsuptionRate": 15.0,
+        "Rate": 15.0
       },
       {
         "RecipeId": 10,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 9,
+        "ConsuptionRate": 15.0,
+        "Rate": 15.0
+      },
+      {
+        "RecipeId": 10,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 5,
@@ -75,21 +141,48 @@
     "Items": [
       {
         "RecipeId": 11,
-        "ConsuptionRate": 10.0
+        "ConsuptionRate": 10.0,
+        "Rate": 10.0
       },
       {
         "RecipeId": 12,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       },
       {
         "RecipeId": 13,
-        "ConsuptionRate": 10.0
+        "ConsuptionRate": 10.0,
+        "Rate": 10.0
       },
       {
         "RecipeId": 14,
-        "ConsuptionRate": 200.0
+        "ConsuptionRate": 200.0,
+        "Rate": 200.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 11,
+        "ConsuptionRate": 10.0,
+        "Rate": 10.0
+      },
+      {
+        "RecipeId": 12,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      },
+      {
+        "RecipeId": 13,
+        "ConsuptionRate": 10.0,
+        "Rate": 10.0
+      },
+      {
+        "RecipeId": 14,
+        "ConsuptionRate": 200.0,
+        "Rate": 200.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 6,
@@ -99,21 +192,48 @@
     "Items": [
       {
         "RecipeId": 4,
-        "ConsuptionRate": 25.0
+        "ConsuptionRate": 25.0,
+        "Rate": 25.0
       },
       {
         "RecipeId": 8,
-        "ConsuptionRate": 22.5
+        "ConsuptionRate": 22.5,
+        "Rate": 22.5
       },
       {
         "RecipeId": 10,
-        "ConsuptionRate": 45.0
+        "ConsuptionRate": 45.0,
+        "Rate": 45.0
       },
       {
         "RecipeId": 14,
-        "ConsuptionRate": 130.0
+        "ConsuptionRate": 130.0,
+        "Rate": 130.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 4,
+        "ConsuptionRate": 25.0,
+        "Rate": 25.0
+      },
+      {
+        "RecipeId": 8,
+        "ConsuptionRate": 22.5,
+        "Rate": 22.5
+      },
+      {
+        "RecipeId": 10,
+        "ConsuptionRate": 45.0,
+        "Rate": 45.0
+      },
+      {
+        "RecipeId": 14,
+        "ConsuptionRate": 130.0,
+        "Rate": 130.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 7,
@@ -123,13 +243,28 @@
     "Items": [
       {
         "RecipeId": 12,
-        "ConsuptionRate": 15.0
+        "ConsuptionRate": 15.0,
+        "Rate": 15.0
       },
       {
         "RecipeId": 15,
-        "ConsuptionRate": 40.0
+        "ConsuptionRate": 40.0,
+        "Rate": 40.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 12,
+        "ConsuptionRate": 15.0,
+        "Rate": 15.0
+      },
+      {
+        "RecipeId": 15,
+        "ConsuptionRate": 40.0,
+        "Rate": 40.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 8,
@@ -139,9 +274,18 @@
     "Items": [
       {
         "RecipeId": 15,
-        "ConsuptionRate": 60.0
+        "ConsuptionRate": 60.0,
+        "Rate": 60.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 15,
+        "ConsuptionRate": 60.0,
+        "Rate": 60.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 9,
@@ -151,9 +295,18 @@
     "Items": [
       {
         "RecipeId": 19,
-        "ConsuptionRate": 20.0
+        "ConsuptionRate": 20.0,
+        "Rate": 20.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 19,
+        "ConsuptionRate": 20.0,
+        "Rate": 20.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 10,
@@ -163,9 +316,18 @@
     "Items": [
       {
         "RecipeId": 27,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 27,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 11,
@@ -175,13 +337,28 @@
     "Items": [
       {
         "RecipeId": 21,
-        "ConsuptionRate": 3.0
+        "ConsuptionRate": 3.0,
+        "Rate": 3.0
       },
       {
         "RecipeId": 22,
-        "ConsuptionRate": 12.0
+        "ConsuptionRate": 12.0,
+        "Rate": 12.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 21,
+        "ConsuptionRate": 3.0,
+        "Rate": 3.0
+      },
+      {
+        "RecipeId": 22,
+        "ConsuptionRate": 12.0,
+        "Rate": 12.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 12,
@@ -191,9 +368,18 @@
     "Items": [
       {
         "RecipeId": 16,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 16,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 13,
@@ -203,13 +389,28 @@
     "Items": [
       {
         "RecipeId": 24,
-        "ConsuptionRate": 24.0
+        "ConsuptionRate": 24.0,
+        "Rate": 24.0
       },
       {
         "RecipeId": 25,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 24,
+        "ConsuptionRate": 24.0,
+        "Rate": 24.0
+      },
+      {
+        "RecipeId": 25,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 14,
@@ -219,9 +420,18 @@
     "Items": [
       {
         "RecipeId": 22,
-        "ConsuptionRate": 10.0
+        "ConsuptionRate": 10.0,
+        "Rate": 10.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 22,
+        "ConsuptionRate": 10.0,
+        "Rate": 10.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 15,
@@ -231,9 +441,18 @@
     "Items": [
       {
         "RecipeId": 19,
-        "ConsuptionRate": 15.0
+        "ConsuptionRate": 15.0,
+        "Rate": 15.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 19,
+        "ConsuptionRate": 15.0,
+        "Rate": 15.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 16,
@@ -243,27 +462,46 @@
     "Items": [
       {
         "RecipeId": 17,
-        "ConsuptionRate": 45.0
+        "ConsuptionRate": 45.0,
+        "Rate": 45.0
       },
       {
         "RecipeId": 18,
-        "ConsuptionRate": 45.0
+        "ConsuptionRate": 45.0,
+        "Rate": 45.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 17,
+        "ConsuptionRate": 45.0,
+        "Rate": 45.0
+      },
+      {
+        "RecipeId": 18,
+        "ConsuptionRate": 45.0,
+        "Rate": 45.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 17,
     "Title": "iron ore",
     "ProductionRate": 1.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [],
+    "ConsumedItems": [],
+    "ProducedItems": []
   },
   {
     "Id": 18,
     "Title": "coal",
     "ProductionRate": 1.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [],
+    "ConsumedItems": [],
+    "ProducedItems": []
   },
   {
     "Id": 19,
@@ -273,16 +511,27 @@
     "Items": [
       {
         "RecipeId": 20,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 20,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 20,
     "Title": "copper ore",
     "ProductionRate": 1.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [],
+    "ConsumedItems": [],
+    "ProducedItems": []
   },
   {
     "Id": 21,
@@ -292,13 +541,28 @@
     "Items": [
       {
         "RecipeId": 14,
-        "ConsuptionRate": 60.0
+        "ConsuptionRate": 60.0,
+        "Rate": 60.0
       },
       {
         "RecipeId": 23,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 14,
+        "ConsuptionRate": 60.0,
+        "Rate": 60.0
+      },
+      {
+        "RecipeId": 23,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 22,
@@ -308,9 +572,18 @@
     "Items": [
       {
         "RecipeId": 1,
-        "ConsuptionRate": 15.0
+        "ConsuptionRate": 15.0,
+        "Rate": 15.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 1,
+        "ConsuptionRate": 15.0,
+        "Rate": 15.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 23,
@@ -320,9 +593,18 @@
     "Items": [
       {
         "RecipeId": 1,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 1,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 24,
@@ -332,9 +614,18 @@
     "Items": [
       {
         "RecipeId": 16,
-        "ConsuptionRate": 60.0
+        "ConsuptionRate": 60.0,
+        "Rate": 60.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 16,
+        "ConsuptionRate": 60.0,
+        "Rate": 60.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 25,
@@ -344,23 +635,36 @@
     "Items": [
       {
         "RecipeId": 26,
-        "ConsuptionRate": 45.0
+        "ConsuptionRate": 45.0,
+        "Rate": 45.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 26,
+        "ConsuptionRate": 45.0,
+        "Rate": 45.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 26,
     "Title": "limestone",
     "ProductionRate": 1.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [],
+    "ConsumedItems": [],
+    "ProducedItems": []
   },
   {
     "Id": 27,
     "Title": "crude oil",
     "ProductionRate": 1.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [],
+    "ConsumedItems": [],
+    "ProducedItems": []
   },
   {
     "Id": 28,
@@ -370,21 +674,48 @@
     "Items": [
       {
         "RecipeId": 11,
-        "ConsuptionRate": 18.75
+        "ConsuptionRate": 18.75,
+        "Rate": 18.75
       },
       {
         "RecipeId": 13,
-        "ConsuptionRate": 11.25
+        "ConsuptionRate": 11.25,
+        "Rate": 11.25
       },
       {
         "RecipeId": 29,
-        "ConsuptionRate": 75.0
+        "ConsuptionRate": 75.0,
+        "Rate": 75.0
       },
       {
         "RecipeId": 14,
-        "ConsuptionRate": 390.0
+        "ConsuptionRate": 390.0,
+        "Rate": 390.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 11,
+        "ConsuptionRate": 18.75,
+        "Rate": 18.75
+      },
+      {
+        "RecipeId": 13,
+        "ConsuptionRate": 11.25,
+        "Rate": 11.25
+      },
+      {
+        "RecipeId": 29,
+        "ConsuptionRate": 75.0,
+        "Rate": 75.0
+      },
+      {
+        "RecipeId": 14,
+        "ConsuptionRate": 390.0,
+        "Rate": 390.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 29,
@@ -394,23 +725,36 @@
     "Items": [
       {
         "RecipeId": 27,
-        "ConsuptionRate": 30.0
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 27,
+        "ConsuptionRate": 30.0,
+        "Rate": 30.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 30,
     "Title": "water",
     "ProductionRate": 1.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [],
+    "ConsumedItems": [],
+    "ProducedItems": []
   },
   {
     "Id": 31,
     "Title": "bauxite",
     "ProductionRate": 1.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [],
+    "ConsumedItems": [],
+    "ProducedItems": []
   },
   {
     "Id": 32,
@@ -420,20 +764,37 @@
     "Items": [
       {
         "RecipeId": 30,
-        "ConsuptionRate": 180.0
+        "ConsuptionRate": 180.0,
+        "Rate": 180.0
       },
       {
         "RecipeId": 31,
-        "ConsuptionRate": 120.0
+        "ConsuptionRate": 120.0,
+        "Rate": 120.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 30,
+        "ConsuptionRate": 180.0,
+        "Rate": 180.0
+      },
+      {
+        "RecipeId": 31,
+        "ConsuptionRate": 120.0,
+        "Rate": 120.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 33,
     "Title": "raw quartz",
     "ProductionRate": 1.0,
     "IsEnabled": true,
-    "Items": []
+    "Items": [],
+    "ConsumedItems": [],
+    "ProducedItems": []
   },
   {
     "Id": 34,
@@ -443,9 +804,18 @@
     "Items": [
       {
         "RecipeId": 33,
-        "ConsuptionRate": 22.5
+        "ConsuptionRate": 22.5,
+        "Rate": 22.5
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 33,
+        "ConsuptionRate": 22.5,
+        "Rate": 22.5
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 35,
@@ -455,13 +825,28 @@
     "Items": [
       {
         "RecipeId": 32,
-        "ConsuptionRate": 240.0
+        "ConsuptionRate": 240.0,
+        "Rate": 240.0
       },
       {
         "RecipeId": 18,
-        "ConsuptionRate": 120.0
+        "ConsuptionRate": 120.0,
+        "Rate": 120.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 32,
+        "ConsuptionRate": 240.0,
+        "Rate": 240.0
+      },
+      {
+        "RecipeId": 18,
+        "ConsuptionRate": 120.0,
+        "Rate": 120.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 36,
@@ -471,13 +856,28 @@
     "Items": [
       {
         "RecipeId": 35,
-        "ConsuptionRate": 90.0
+        "ConsuptionRate": 90.0,
+        "Rate": 90.0
       },
       {
         "RecipeId": 34,
-        "ConsuptionRate": 75.0
+        "ConsuptionRate": 75.0,
+        "Rate": 75.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 35,
+        "ConsuptionRate": 90.0,
+        "Rate": 90.0
+      },
+      {
+        "RecipeId": 34,
+        "ConsuptionRate": 75.0,
+        "Rate": 75.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 37,
@@ -487,9 +887,18 @@
     "Items": [
       {
         "RecipeId": 36,
-        "ConsuptionRate": 90.0
+        "ConsuptionRate": 90.0,
+        "Rate": 90.0
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 36,
+        "ConsuptionRate": 90.0,
+        "Rate": 90.0
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 38,
@@ -499,17 +908,38 @@
     "Items": [
       {
         "RecipeId": 39,
-        "ConsuptionRate": 18.0
+        "ConsuptionRate": 18.0,
+        "Rate": 18.0
       },
       {
         "RecipeId": 8,
-        "ConsuptionRate": 14.0
+        "ConsuptionRate": 14.0,
+        "Rate": 14.0
       },
       {
         "RecipeId": 21,
-        "ConsuptionRate": 2.5
+        "ConsuptionRate": 2.5,
+        "Rate": 2.5
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 39,
+        "ConsuptionRate": 18.0,
+        "Rate": 18.0
+      },
+      {
+        "RecipeId": 8,
+        "ConsuptionRate": 14.0,
+        "Rate": 14.0
+      },
+      {
+        "RecipeId": 21,
+        "ConsuptionRate": 2.5,
+        "Rate": 2.5
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 39,
@@ -519,9 +949,18 @@
     "Items": [
       {
         "RecipeId": 33,
-        "ConsuptionRate": 37.5
+        "ConsuptionRate": 37.5,
+        "Rate": 37.5
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 33,
+        "ConsuptionRate": 37.5,
+        "Rate": 37.5
+      }
+    ],
+    "ProducedItems": []
   },
   {
     "Id": 40,
@@ -531,16 +970,75 @@
     "Items": [
       {
         "RecipeId": 37,
-        "ConsuptionRate": 40.0
+        "ConsuptionRate": 40.0,
+        "Rate": 40.0
       },
       {
         "RecipeId": 38,
-        "ConsuptionRate": 1.25
+        "ConsuptionRate": 1.25,
+        "Rate": 1.25
       },
       {
         "RecipeId": 6,
-        "ConsuptionRate": 1.25
+        "ConsuptionRate": 1.25,
+        "Rate": 1.25
       }
-    ]
+    ],
+    "ConsumedItems": [
+      {
+        "RecipeId": 37,
+        "ConsuptionRate": 40.0,
+        "Rate": 40.0
+      },
+      {
+        "RecipeId": 38,
+        "ConsuptionRate": 1.25,
+        "Rate": 1.25
+      },
+      {
+        "RecipeId": 6,
+        "ConsuptionRate": 1.25,
+        "Rate": 1.25
+      }
+    ],
+    "ProducedItems": []
+  },
+  {
+    "Id": 41,
+    "Title": "smart plating",
+    "ProductionRate": 2.0,
+    "IsEnabled": true,
+    "ConsumedItems": [
+      {
+        "RecipeId": 21,
+        "ConsuptionRate": 2.0,
+        "Rate": 2.0
+      },
+      {
+        "RecipeId": 42,
+        "ConsuptionRate": 2.0,
+        "Rate": 2.0
+      }
+    ],
+    "ProducedItems": []
+  },
+  {
+    "Id": 42,
+    "Title": "rotor",
+    "ProductionRate": 4.0,
+    "IsEnabled": true,
+    "ConsumedItems": [
+      {
+        "RecipeId": 22,
+        "ConsuptionRate": 20.0,
+        "Rate": 20.0
+      },
+      {
+        "RecipeId": 14,
+        "ConsuptionRate": 25.0,
+        "Rate": 25.0
+      }
+    ],
+    "ProducedItems": []
   }
 ]
