@@ -415,20 +415,13 @@
   {
     "Id": 14,
     "Title": "screw",
-    "ProductionRate": 40.0,
+    "ProductionRate": 50.0,
     "IsEnabled": true,
-    "Items": [
-      {
-        "RecipeId": 22,
-        "ConsuptionRate": 10.0,
-        "Rate": 10.0
-      }
-    ],
     "ConsumedItems": [
       {
-        "RecipeId": 22,
-        "ConsuptionRate": 10.0,
-        "Rate": 10.0
+        "RecipeId": 1,
+        "ConsuptionRate": 12.5,
+        "Rate": 12.5
       }
     ],
     "ProducedItems": []
@@ -1035,8 +1028,8 @@
       },
       {
         "RecipeId": 14,
-        "ConsuptionRate": 25.0,
-        "Rate": 25.0
+        "ConsuptionRate": 100.0,
+        "Rate": 100.0
       }
     ],
     "ProducedItems": []
